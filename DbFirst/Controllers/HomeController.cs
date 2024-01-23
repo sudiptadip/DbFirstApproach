@@ -1,3 +1,4 @@
+using DbFirst.Data;
 using DbFirst.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -7,12 +8,12 @@ namespace DbFirst.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly EmpContext _db;
+        private readonly ApplicationDbContext _db;
 
-        public HomeController(ILogger<HomeController> logger, EmpContext db)
+        public HomeController(ILogger<HomeController> logger, ApplicationDbContext db)
         {
             _logger = logger;
-            _db = db;   
+            _db = db;
         }
 
         public IActionResult Index()
