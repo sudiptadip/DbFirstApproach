@@ -30,3 +30,6 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+
+// Scaffold-DbContext "server=DESKTOP-RH9DG0K\SQLEXPRESS; database=emp; trusted_connection=true; TrustServerCertificate=true;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -context ApplicationDbContext -f -contextDir Data -DataAnnotation
